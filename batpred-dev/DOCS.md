@@ -1,6 +1,6 @@
-#  Predbat Home Assistant App
+# BatPred Dev Home Assistant App
 
-This app can be used with Home Assistant to run Predbat without AppDaemon, or even outside Home Assistant
+This app can be used with Home Assistant to run the Scholdan BatPred dev fork without AppDaemon, or even outside Home Assistant.
 
 ![image](https://github.com/springfall2008/predbat_addon/assets/48591903/50580da1-5110-4711-b740-1c14cc103835)
 
@@ -11,18 +11,18 @@ If you want to buy me a beer then please use Paypal - [tdlj@tdlj.net](mailto:tdl
 
 ## Installation as an app in Home Assistant
 
-[![Open your Home Assistant instance and show the add app repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fspringfall2008%2Fpredbat_addon)
+[![Open your Home Assistant instance and show the add app repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FScholdan%2Fpredbat_addon)
 
 * Go to settings, apps, install app, custom repositories
-* Add 'https://github.com/springfall2008/predbat_addon' as a new repository
+* Add 'https://github.com/Scholdan/predbat_addon' as a new repository
 
 ![image](https://github.com/springfall2008/predbat_addon/assets/48591903/7eb18076-888b-4ea5-844b-cfa93157b759)
 
 * Click out of the repository list and refresh the page
-* Scroll down and find Predbat, click on it and click 'Install'
-* Once installed you can click start, it will now download the latest Predbat and start it running
+* Scroll down and find BatPred Dev, click on it and click 'Install'
+* Once installed you can click start, it will now download BatPred from the Scholdan dev fork and start it running
 * Predbat will error out as you have a Template configuration
-* Navigate to `/addon_configs/6adb4f0d_predbat` directory in Home Assistant file editor or via a Samba/SSH mount
+* Navigate to the `batpred-dev` add-on config directory in Home Assistant file editor or via a Samba/SSH mount
 * Edit/replace the `apps.yaml` with the correct completed one as per Predbat documentation
 * Click restart on the app if need be (it might start automatically anyhow)
 
@@ -34,8 +34,8 @@ Do not run this at the same time as the appdaemon-predbat or Predbat within AppD
 
 Predbat can be run on a seperate machine also, you will need a MacOS with Python3, a Linux box (e.g. Debian) or Windows with the Linux subsystem (not yet tested but should work).
 
-* Download the files from rootfs directory (https://github.com/springfall2008/predbat_addon/tree/main/predbat/rootfs) into their own directory on your machine
-* Make sure your python environment has the dependancies required installed (https://github.com/springfall2008/predbat_addon/blob/main/predbat/requirements.txt)
+* Download the files from rootfs directory (https://github.com/Scholdan/predbat_addon/tree/main/batpred-dev/rootfs) into their own directory on your machine
+* Make sure your python environment has the dependancies required installed (https://github.com/Scholdan/predbat_addon/blob/main/batpred-dev/requirements.txt)
 * Launch run.csh (you might want to make this startup from boot if you want to keep Predbat running). This will download Predbat for the first time and then fail
 * Edit apps.yaml (or copy your previous version from an old installs inside HA) as per the Predbat documentation
 * Add `ha_url` / `ha_key` settings into apps.yaml
@@ -45,10 +45,10 @@ Predbat can be run on a seperate machine also, you will need a MacOS with Python
 
 ## Running from within Docker
 
-* Download the contents of 'https://github.com/springfall2008/predbat_addon/tree/main/predbat' onto your machine
+* Download the contents of 'https://github.com/Scholdan/predbat_addon/tree/main/batpred-dev' onto your machine
 * You should see Dockerfile.standalone and rootfs directories
-* Download *.py from Predbat repo (https://github.com/springfall2008/batpred/blob/main/apps/predbat/predbat.py) and place the code into rootfs
-* Download apps.yaml from Predbat repo (https://github.com/springfall2008/batpred/blob/main/apps/predbat/config/apps.yaml), place it into rootfs and edit it as per the Predbat documentation
+* Download *.py from Predbat repo (https://github.com/Scholdan/batpred/blob/main/apps/predbat/predbat.py) and place the code into rootfs
+* Download apps.yaml from Predbat repo (https://github.com/Scholdan/batpred/blob/main/apps/predbat/config/apps.yaml), place it into rootfs and edit it as per the Predbat documentation
 * Add `ha_url` / `ha_key` settings into `apps.yaml`.
   * The `ha_url` must be your Home Assistant machine e.g. http://homeassistant.local:8123
   * The `ha_key` must be the persistant key you can generate in Home Assistant in your user/security section

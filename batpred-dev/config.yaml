@@ -1,9 +1,9 @@
 ---
-name: Predbat
-version: 1.7.0
-slug: predbat
-description: Home Battery Prediction and Control
-url: https://github.com/springfall2008/predbat_addon
+name: BatPred Dev
+version: 1.7.0-dev.1
+slug: batpred-dev
+description: Home Battery Prediction and Control - Scholdan dev build
+url: https://github.com/Scholdan/predbat_addon
 codenotary: tdlj@tdlj.net
 ingress: True
 ingress_port: 5052
