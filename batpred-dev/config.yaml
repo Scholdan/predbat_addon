@@ -1,6 +1,6 @@
 ---
 name: BatPred Dev
-version: 1.7.0-dev.2
+version: 1.7.0-dev.3
 slug: batpred-dev
 description: Home Battery Prediction and Control - Scholdan dev build
 url: https://github.com/Scholdan/predbat_addon
