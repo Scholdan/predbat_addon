@@ -1,5 +1,9 @@
 # Predbat_addon CHANGELOG
 
+## 1.7.0-dev.4
+
+- Refresh BatPred Dev to pull the latest Scholdan BatPred main branch on restart, including dynamic additional load forecast fixes.
+
 ## 1.2.2
 
 - Add Jinja2 to the addon requirements by @iainfogg in #22
