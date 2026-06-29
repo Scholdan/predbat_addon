@@ -11,3 +11,4 @@ prometheus-client
 protobuf
 pvlib
 aiofiles
+aiohttp
